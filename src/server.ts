@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import { client } from "./client";
 
 dotenv.config();
-const port = process.env.PORT;
+const port = process.env.PORT || 6767;
 const app = express();
 const httpServer = app.listen(port);
 const wss = new WebSocketServer({ server: httpServer });
